@@ -1,3 +1,4 @@
+/* Set background color of body and border */
 body {
   background: papayawhip;
 }
@@ -5,6 +6,8 @@ body {
 * {
   border: 1px solid black;
 }
+
+/* Flexbox for width up to 599px */
 
 .container {
   background-color: #fff;
@@ -14,8 +17,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* gap: 10px; */
+  gap: 5px;
 }
 
 .a {
@@ -37,6 +39,7 @@ body {
   flex-grow: 1;
 }
 
+/* Flexbox for divs c, d, and e */
 .cde-items {
   background-color: rgb(100, 135, 151);
   display: flex;
@@ -48,53 +51,51 @@ body {
 
 .c {
   background-color: lightblue;
-  /* width: 33%; */
-  /* min-height: 15vh; */
   flex-grow: 3;
 }
 
 .d {
   background-color: lightpink;
-  /* width: 33%; */
   flex-grow: 3;
-  /* min-height: 15vh; */
 }
 
 .e {
   background-color: lightgreen;
-  /* width: 33%; */
   flex-grow: 3;
-  /* min-height: 15vh; */
 }
 
+/* Media query for 600px and up */
 @media (min-width: 600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
-    /* align-content: space-around; */
-    gap: 5px;
   }
 
   .a {
-    /* width: 100%; */
-    height: 30vh;
-    /* flex-grow: 3; */
+    width: 100%;
+    background-color: lightcyan;
+    min-height: 45vh;
   }
 
-  /* .cde {
-    width: 75%;
-  } */
+  .c,
+  .d,
+  .e {
+    flex-grow: 1;
+    min-height: 25vh;
+  }
+
+  .b {
+    flex-grow: 1;
+    min-height: 35vh;
+  }
 
   .bcde {
     background-color: blueviolet;
-    flex-direction: column;
-    /* height: 70vh; */
-    /* width: 75%; */
-    /* flex-basis: 60%; */
-    /* flex-grow: 1; */
+    width: 75%; /* trying to set the width to the container. It's not working for me. Unable to determine what is setting the default width. */
   }
 
   .f {
-    width: 20%;
+    width: 25%;
+    min-height: 60vh;
   }
 }
