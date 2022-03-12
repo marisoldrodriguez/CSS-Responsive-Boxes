@@ -91,7 +91,7 @@ body {
 
   .bcde-items {
     background-color: blueviolet;
-    width: 73%; /* trying to set the width to the container. It's not working for me. Unable to determine what is setting the default width. */
+    width: 73%;
   }
 
   .f {
